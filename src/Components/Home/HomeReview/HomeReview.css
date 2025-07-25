@@ -1,0 +1,24 @@
+.ReviewOuter {
+  margin: 2em;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  color: grey;
+}
+
+.ReviewInner {
+  margin: 0.5em;
+  text-align: center;
+  font-weight: 400;
+  color: grey;
+}
+
+.ReviewText {
+  text-align: justify;
+  margin-bottom: 2em;
+}
+
+.ReviewName {
+  margin: 2em;
+  font-weight: 500;
+}
