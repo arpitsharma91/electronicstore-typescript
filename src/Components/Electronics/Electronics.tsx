@@ -7,7 +7,8 @@ import "./Electronics.css";
 import Electroniclist from "../Electroniclist/Electroniclist";
 import type { DataProperties } from "../../shared/Models/Types/types";
 import type { slicedmachineDatatype } from "../../shared/Models/Interfaces/interface";
-//import {navigate}  from "../../shared/Constants/constants";
+import * as BUTTONS from "../../shared/Constants/commonbutton";
+import * as ITEMS from "../../shared/Constants/electronicitem";
 
 const Electronics: React.FC = () => {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const Electronics: React.FC = () => {
   return (
     <div>
       <div className="ElectronicsOuter">
-        <h1 className="ElectronicsHeader">AirConditioners</h1>
+        <h1 className="ElectronicsHeader">{ITEMS.AIR_CONDITIONERS}</h1>
         <Container fluid>
           <Row>
             {slicedacData.map((ac: DataProperties) => {
@@ -39,11 +40,11 @@ const Electronics: React.FC = () => {
         </Container>
         <div className="ElectronicsButton">
           <Button variant="primary" size="lg" onClick={acbuttonhandler}>
-            VIEW All
+            {BUTTONS.VIEW_ALL}
           </Button>
         </div>
         <hr />
-        <h1 className="ElectronicsHeader">Televisions</h1>
+        <h1 className="ElectronicsHeader">{ITEMS.TELEVISIONS}</h1>
         <Container fluid>
           <Row>
             {slicedtvData.map((tv: DataProperties) => {
@@ -59,11 +60,11 @@ const Electronics: React.FC = () => {
               navigate("/televisions");
             }}
           >
-            VIEW All
+            {BUTTONS.VIEW_ALL}
           </Button>
         </div>
         <hr />
-        <h1 className="ElectronicsHeader">Washing Machines</h1>
+        <h1 className="ElectronicsHeader">{ITEMS.WASHING_MACHINES}</h1>
         <Container fluid>
           <Row>
             {slicedmachineData.map((machine: DataProperties) => {
@@ -75,7 +76,7 @@ const Electronics: React.FC = () => {
         </Container>
         <div className="ElectronicsButton">
           <Button variant="primary" size="lg" onClick={machinebuttonhandler}>
-            VIEW All
+            {BUTTONS.VIEW_ALL}
           </Button>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { Shoppingcontext } from "../../../shared/Context/UserContext";
 import type { LoginData } from "../../../shared/Models/Interfaces/interface";
 import type { UserDataType } from "../../../shared/Models/Types/types";
 import { SignupURL } from "../../../shared/services/services";
+import * as BUTTONS from "../../../shared/Constants/commonbutton";
 
 function Signup() {
   const [validated, setValidated] = useState<boolean>(false);
@@ -141,7 +142,7 @@ function Signup() {
             </Form.Control.Feedback>
           </Form.Group>
           <Button type="button" onClick={submitHandler}>
-            Submit
+            {BUTTONS.SUBMIT}
           </Button>
         </Form>
       </Card>

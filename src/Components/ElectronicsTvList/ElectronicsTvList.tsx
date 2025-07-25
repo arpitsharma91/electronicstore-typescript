@@ -5,12 +5,13 @@ import { tvData } from "../../shared/mockData/mockData";
 import type { DataProperties } from "../../shared/Models/Types/types";
 import "../Electronics/Electronics.css";
 import Electroniclist from "../Electroniclist/Electroniclist";
+import * as ITEMS from "../../shared/Constants/electronicitem";
 
 function Television() {
   return (
     <React.Fragment>
       <div className="ElectronicOuter">
-        <h1 className="ElectronicsHeader">Televisions</h1>
+        <h1 className="ElectronicsHeader">{ITEMS.TELEVISIONS}</h1>
         <Container fluid>
           <Row>
             {tvData.map((tv: DataProperties) => {

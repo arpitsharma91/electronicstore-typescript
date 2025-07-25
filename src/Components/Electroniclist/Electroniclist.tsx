@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import Ordersummarymodal from "../../Containers/Ordersummarymodal/Ordersummarymodal";
 import "./ElectronicList.css";
 import type { ElectroniclistChildProps } from "../../shared/Models/Interfaces/interface";
+import * as BUTTONS from "../../shared/Constants/commonbutton";
 
 const Electroniclist: React.FC<ElectroniclistChildProps> = ({
   electronicdata,
@@ -45,7 +46,7 @@ const Electroniclist: React.FC<ElectroniclistChildProps> = ({
           <Card.Text>Price - {electronicdata.price} /- </Card.Text>
           <div className="ElecItemsButton">
             <Button variant="primary" onClick={modalopenHandler}>
-              Buy Now
+              {BUTTONS.BUY_NOW}
             </Button>
 
             <Link to={`/products/${electronicdata.key}`}>

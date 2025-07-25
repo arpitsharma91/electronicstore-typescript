@@ -7,6 +7,7 @@ import "./Navigation.css";
 import { Shoppingcontext } from "../../shared/Context/UserContext";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import * as ITEMS from "../../shared/Constants/electronicitem";
 
 function Navigation() {
   const user = Shoppingcontext();
@@ -32,20 +33,20 @@ function Navigation() {
           <Navbar.Brand>
             {" "}
             <NavLink to="/" className="ToolbarLink">
-              ShoppingStore
+              SHOPPINGSTORE
             </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link to="/" className="ToolbarLink" as={NavLink}>
-                Home
+                HOME
               </Nav.Link>
               <Nav.Link to="/electronics" className="ToolbarLink" as={NavLink}>
-                Electronics
+                ELECTRONICS
               </Nav.Link>
               <NavDropdown
-                title="Explore"
+                title="EXPLORE"
                 id="collapsible-nav-dropdown"
                 className="ToolbarLink"
               >
@@ -54,21 +55,21 @@ function Navigation() {
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  AirConditioners
+                  {ITEMS.AIR_CONDITIONERS}
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   to="/televisions"
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  Televisions
+                  {ITEMS.TELEVISIONS}
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   to="/washingmachines"
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  Washing Machines
+                  {ITEMS.WASHING_MACHINES}
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item
@@ -76,7 +77,7 @@ function Navigation() {
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  All Items
+                  ALL ITEMS
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
@@ -87,23 +88,23 @@ function Navigation() {
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  Dashboard
+                  DASHBOARD
                 </Nav.Link>
                 <Nav.Link
                   to="/userdashboard/cart"
                   className="ToolbarLink"
                   as={NavLink}
                 >
-                  Cart
+                  CART
                 </Nav.Link>
                 <Nav.Link className="ToolbarLink" onClick={onlogout}>
-                  Logout
+                  LOGOUT
                 </Nav.Link>{" "}
               </Nav>
             ) : (
               <Nav>
                 <Nav.Link to="/login" className="ToolbarLink" as={NavLink}>
-                  Login
+                  LOGIN
                 </Nav.Link>
               </Nav>
             )}

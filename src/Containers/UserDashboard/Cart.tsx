@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Ordersummarymodal from "../Ordersummarymodal/Ordersummarymodal";
 import "./Dashboard.css";
+import * as BUTTONS from "../../shared/Constants/commonbutton";
 
 function Cart() {
   const [modalShow, setModalShow] = useState<boolean>(false);
@@ -35,7 +36,7 @@ function Cart() {
                       onClick={() => setModalShow(true)}
                       className="m-2"
                     >
-                      Buy Now
+                      {BUTTONS.BUY_NOW}
                     </Button>
                     <Button
                       variant="danger"

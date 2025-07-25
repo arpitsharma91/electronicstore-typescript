@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import type { OrderModalSummaryProps } from "../../shared/Models/Interfaces/interface";
 import "./Ordersummarymodal.css";
 import { Shoppingcontext } from "../../shared/Context/UserContext";
+import * as BUTTONS from "../../shared/Constants/commonbutton";
 
 const Ordersummarymodal: React.FC<OrderModalSummaryProps> = ({
   show,
@@ -45,10 +46,10 @@ const Ordersummarymodal: React.FC<OrderModalSummaryProps> = ({
 
       <div className="OrderSummaryButton">
         <Button variant="success" onClick={orderHandler}>
-          Order
+          {BUTTONS.ORDER}
         </Button>
         <Button variant="danger" onClick={onHide}>
-          Cancel
+          {BUTTONS.CANCEL}
         </Button>
       </div>
     </Modal>

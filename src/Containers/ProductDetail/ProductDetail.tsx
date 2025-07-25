@@ -11,6 +11,7 @@ import { acData, machineData, tvData } from "../../shared/mockData/mockData";
 import type { DataProperties } from "../../shared/Models/Types/types";
 import "./ProductDetail.css";
 import { Shoppingcontext } from "../../shared/Context/UserContext";
+import * as BUTTONS from "../../shared/Constants/commonbutton";
 
 function Productdetail() {
   const [modalShow, setModalShow] = useState<boolean>(false);
@@ -89,7 +90,7 @@ function Productdetail() {
             </Card.Title>
             <div className="ProductDetailBottom">
               <Button variant="primary" onClick={() => setModalShow(true)}>
-                Buy Now
+                {BUTTONS.BUY_NOW}
               </Button>
 
               <Button variant="primary" onClick={addtocartHandler}>

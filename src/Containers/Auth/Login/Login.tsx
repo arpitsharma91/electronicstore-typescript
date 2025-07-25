@@ -9,6 +9,7 @@ import type { LoginData } from "../../../shared/Models/Interfaces/interface";
 import type { SigninData } from "../../../shared/Models/Types/types";
 import { Link } from "react-router-dom";
 import { loginURL } from "../../../shared/services/services";
+import * as BUTTONS from "../../../shared/Constants/commonbutton";
 import "./Login.css";
 function Login() {
   const [validated, setValidated] = useState<boolean>(false);
@@ -89,7 +90,7 @@ function Login() {
           </Form.Group>
 
           <Button variant="primary" type="button" onClick={handleSubmit}>
-            Submit
+            {BUTTONS.SUBMIT}
           </Button>
         </Form>
         <div className="LoginBottom">
